@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <h1 id="title">Music-Genre Survey Form</h1>
+  <p id="description">Thank you for sharing your music preferences with us. This will help us enhance our weekly magazine.</p>
+  <form id="survey-form" onsubmit="return validateForm()">
+    <label id="name-label">Name
+      <input id="name" type="text" name="name" placeholder="Enter your name" required />
+    </label>
+    <br>
+    <label id="email-label">Email
+      <input id="email" type="email" name="email" placeholder="Enter your email" required />
+    </label>
+    <br>
+    <label id="number-label">Age
+      <input id="number" type="number" name="number" placeholder="Age" min="13" max="100" required />
+    </label>
+    <br>
+    <label for="dropdown">What genre of music do you listen to often?
+      <select id="dropdown" name="dropdown">
+        <option value="">(select one)</option>
+        <option value="1">Classic Rock</option>
+        <option value="2">Blues</option>
+        <option value="3">Pop</option>
+        <option value="4">Jazz, Soul, R&B</option>
+        <option value="5">Classical</option>
+      </select>
+    </label>
+    <br>
+    <label>Choose an instrument:</label>
+    <br>
+    <label for="guitar">
+      <input id="guitar" type="radio" name="instrument" value="guitar" required>Guitar
+    </label>
+    <label for="piano">
+      <input id="piano" type="radio" name="instrument" value="piano" required>Piano
+    </label>
+    <label for="drums">
+      <input id="drums" type="radio" name="instrument" value="drums" required>Drums
+    </label>
+    <label for="violin">
+      <input id="violin" type="radio" name="instrument" value="violin" required>Violin
+    </label>
+    <label for="trumpet">
+      <input id="trumpet" type="radio" name="instrument" value="trumpet" required>Trumpet
+    </label>
+    <br>
+    <label>Which platforms do you use most frequently to listen to music?</label>
+    <br>
+    <label for="platform1">
+      <input class="inline" id="platform1" type="checkbox" name="platform" value="spotify">Spotify/YouTube Music/iTunes/any other streaming platform
+    </label>
+    <br>
+    <label for="platform2">
+      <input class="inline" id="platform2" type="checkbox" name="platform" value="radio">Radio
+    </label>
+    <br>
+    <label for="platform3">
+      <input class="inline" id="platform3" type="checkbox" name="platform" value="record-player">Record Player
+    </label>
+    <br>
+    <label for="platform4">
+      <input class="inline" id="platform4" type="checkbox" name="platform" value="cd-player">CD Player
+    </label>
+    <br>
+    <label>Feel free to share any feedback!</label>
+    <textarea id="comments" name="comments" rows="5" cols="35" placeholder="I like or dislike something about your magazine..."></textarea>
+    <br>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</body>
+</html>
